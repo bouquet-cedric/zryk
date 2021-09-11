@@ -1,0 +1,137 @@
+#play {
+    position: absolute;
+    left: 20%;
+    top: 4em;
+    min-height: calc(100vh - 4em);
+    background-color: rgba(106, 90, 205, 0.6);
+    width: 80%;
+}
+
+#dessin {
+    --longueur: 500px;
+    --ecart: calc(var(--longueur) / 2);
+    --haut: calc(28% - var(--ecart));
+    --left: calc(50% - var(--ecart));
+    width: var(--longueur);
+    height: var(--longueur);
+    margin-top: var(--haut);
+    margin-bottom: var(--haut);
+    margin-left: var(--left);
+    margin-right: var(--left);
+}
+
+#volume {
+    --longueur: 500px;
+    --ecart: calc(var(--longueur) / 2);
+    --left: calc(50% - var(--ecart));
+    -webkit-appearance: none;
+    left: calc(var(--left) - 100px);
+    position: absolute;
+    width: 230px;
+    transform: rotate(-90deg);
+    top: 48.5%;
+    height: 1em;
+    color: red;
+    background: royalblue;
+    background-image: linear-gradient(to bottom, "white", red, "white");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 25%;
+    border-radius: 25px;
+}
+
+#volume::-webkit-slider-runnable-track {
+    height: 100%;
+    border: none;
+    background-color: transparent;
+    border-radius: 0;
+}
+
+#volume::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 1.5em;
+    padding: 0.25em;
+    height: inherit;
+    border: none;
+    background: linear-gradient(90deg, red, red) content-box, linear-gradient(-90deg, #888, #DDD) border-box;
+    border-radius: 50%;
+    box-shadow: 0 0 .5em white inset;
+}
+
+#vol {
+    --longueur: 500px;
+    --ecart: calc(var(--longueur) / 2);
+    --left: calc(50% - var(--ecart));
+    left: calc(var(--left) - 48px);
+    background-color: slategrey;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: calc(50% - 25px);
+    color: white;
+    line-height: 50px;
+    vertical-align: middle;
+    text-align: center;
+    border-radius: 20px 0 0 20px;
+}
+
+#titre {
+    --longueur: 500px;
+    --titre: calc(50% - var(--longueur)/2 - 12px);
+    position: absolute;
+    top: calc(var(--titre) + 20px);
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Drawing";
+    color: white;
+    font-size: 24px;
+}
+
+#time {
+    position: absolute;
+    width: 100%;
+    --bas: calc(50% - 2em - 250px);
+    text-align: center;
+    bottom: calc(var(--bas) + 20%);
+    color: lightgreen;
+}
+
+#temps {
+    position: absolute;
+    width: 400px;
+    --bas: calc(50% - 2em - 250px);
+    bottom: calc(var(--bas) + 17%);
+    left: calc(50% - 200px);
+    border: 50px;
+}
+
+$lines: "--";
+#titre::before {
+    content: $lines"\0A";
+}
+
+#titre::after {
+    content: "\0A"$lines;
+}
+
+* {
+    outline: 0;
+}
+
+@font-face {
+    font-family: "drawing";
+    src: url("../../assets/fonts/drawing.ttf");
+}
+
+#temps::-webkit-progress-value {
+    border-radius: 50px;
+    color: red;
+    border: 1px dashed lightblue;
+    background-color: rgba(190, 190, 190, 0.9);
+}
+
+#temps::-webkit-progress-bar {
+    border-radius: 50px;
+    height: 5px;
+}

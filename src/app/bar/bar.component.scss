@@ -1,0 +1,43 @@
+.barre {
+    height: 4em;
+    background-color: black;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#logo {
+    background-color: burlywood;
+    background-image: url("../../assets/ZRYK.png");
+    border-radius: 0;
+    height: 90%;
+    margin-left: 0.125em;
+    width: 4em;
+}
+
+#youtube {
+    background-image: url("../../assets/YouTube.png");
+}
+
+.barre>* {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 20px;
+    line-height: 4em;
+    border-radius: 50px;
+}
+
+.bulles {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    width: 3em;
+    height: 2em;
+    border: 1px solid white;
+    background-color: black;
+}
+
+#who {
+    color: white;
+}

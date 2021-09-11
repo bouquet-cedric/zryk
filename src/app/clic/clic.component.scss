@@ -1,0 +1,18 @@
+$barre: rgb(50, 80, 120);
+$middle: black;
+$last: transparent;
+.clic {
+    background-color: transparent;
+    // height: calc(100vh - 65%);
+    // width: 1em;
+    height: 1.5em;
+    width: 2em;
+    // border-radius: 50px;
+    border-radius: 0 0 50px 0;
+    background-image: linear-gradient(135deg, $barre 25%, $middle 0%, $middle 50%, $last 25%);
+    position: absolute;
+    // top: calc(20% + 4em);
+    top: 4em;
+    left: 0;
+    cursor: url("../../assets/pilus2.CUR"), default;
+}

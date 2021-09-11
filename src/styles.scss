@@ -1,1 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
+
+.matieres::before {
+    content: "\2B91\00A0\00A0";
+    color: blue;
+}
+
+.Ul_titre {
+    color: aliceblue;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.categorie {
+    color: red;
+    font-style: italic;
+}
+
+.categorie::before {
+    content: "\2B78\00A0\00A0"
+}
+
+li {
+    list-style: none;
+}
+
+* {
+    overflow: hidden;
+}

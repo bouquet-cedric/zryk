@@ -1,0 +1,11 @@
+<div id="play" class="animate__animated animate__slideInDown">
+    <img usemap="#player" src="../../assets/player.svg" id="dessin">
+    <map name="player">
+        <area shape="circle" coords="125,467.5,27.5" (click)="play()">
+    </map>
+    <input type="range" id="volume" min="0" max="100" step="10" value="50" (change)="affect()" />
+    <div id="vol"></div>
+    <div id="titre"></div>
+    <div id="time"></div>
+    <progress id="temps"></progress>
+</div>
